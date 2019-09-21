@@ -1,17 +1,16 @@
 package com.mohsinkerai.sample.account;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import com.mohsinkerai.sample.helpers.BeanStorage;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Optional;
 import org.junit.AfterClass;
 import org.junit.Before;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.sql2o.Sql2o;

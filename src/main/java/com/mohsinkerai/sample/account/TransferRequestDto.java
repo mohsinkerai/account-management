@@ -6,6 +6,12 @@ public class TransferRequestDto {
   private int toAccount;
   private long amount;
 
+  public TransferRequestDto(int fromAccount, int toAccount, long amount) {
+    this.fromAccount = fromAccount;
+    this.toAccount = toAccount;
+    this.amount = amount;
+  }
+
   public int getFromAccount() {
     return fromAccount;
   }

@@ -20,26 +20,5 @@ public class Main {
     threadPool(10);
     init();
     initializeAll();
-
-    AccountRepository accountRepository = new AccountRepository();
-    Gson gson = new Gson();
-
-    Spark.path("/account", () -> {
-      get("/:accountId", (request, response) -> {
-        String accountId = request.params(":accountId");
-        Integer accountIdInteger = Integer.valueOf(accountId);
-        return accountRepository.getAccount(accountIdInteger);
-      }, gson::toJson);
-      post("/transfer", (request, response) -> {
-        TransferRequestDto transferRequestDto = gson
-            .fromJson(request.body(), TransferRequestDto.class);
-        accountRepository.transfer(transferRequestDto.getFromAccount(), transferRequestDto.getToAccount(), transferRequestDto.getAmount());
-        return "{}";
-      });
-    });
-
-    get("/exception", (request, response) -> {
-      throw new CustomException(1, "Something Bad Happened");
-    });
   }
 }
