@@ -16,7 +16,7 @@
     <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
     <maven-compiler-plugin.source>1.8</maven-compiler-plugin.source>
     <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <hsqldb.version>2.4.0</hsqldb.version>
   </properties>
 
